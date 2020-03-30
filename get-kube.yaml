@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: get-conf
+data:
+  ENDPOINT: "back-srv:8083"
+  HOST_PORT: "8084"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: get
+  labels:
+    app: get
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: get
+  template:
+    metadata:
+      labels:
+        app: get
+    spec:
+      containers:
+        - name: get
+          image: nikitasadok/go-get-service
+          ports:
+            - containerPort: 8084
+              protocol: TCP
+          envFrom:
+          - configMapRef:
+              name: get-conf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: get-srv
+  labels:
+    app: get
+spec:
+  type: NodePort
+  ports:
+  - port: 8084
+    protocol: TCP
+    targetPort: 8084
+  selector:
+    app: get
+
+
