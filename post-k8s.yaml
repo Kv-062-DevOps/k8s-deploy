@@ -10,7 +10,7 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: post-dep
+  name: post
   labels:
     app: post
 spec:
@@ -20,12 +20,12 @@ spec:
       app: post
   template:
     metadata:
-      name: post-dep
+      name: post
       labels:
         app: post
     spec:
       containers:
-      - name: post-dep
+      - name: post
         image: nigth/postconv
         imagePullPolicy: IfNotPresent
         envFrom:
