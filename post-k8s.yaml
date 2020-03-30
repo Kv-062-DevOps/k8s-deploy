@@ -2,7 +2,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: post-conf
-  namespace: demo
 data:
   POSTPORT: "8082"
   BACKPORT: "8083"
@@ -11,8 +10,7 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: post
-  namespace: demo
+  name: post-dep
   labels:
     app: post
 spec:
@@ -22,12 +20,12 @@ spec:
       app: post
   template:
     metadata:
-      name: post
+      name: post-dep
       labels:
         app: post
     spec:
       containers:
-      - name: post
+      - name: post-dep
         image: nigth/postconv
         imagePullPolicy: IfNotPresent
         envFrom:
@@ -38,7 +36,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: post-srv
-  namespace: demo
   labels:
     app: post
 spec:
