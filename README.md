@@ -15,7 +15,7 @@ kubectl apply -f ./
 ```
 If you have Windows, do port forwarding:
 ```
-kubectl port-forward front-srv 8083:8080
+kubectl port-forward service/front-srv 8083:8080
 ```
 Use command to get the address link:
 ```
