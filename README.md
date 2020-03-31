@@ -1,6 +1,6 @@
-# k8s-deploy
+# The "Employee Manager" application
 
-**Kubernetes, Minikube, Docker**
+_Kubernetes, Minikube, Docker_
 ---
 ## How to start the Demo project with all services in the Minikube
 
