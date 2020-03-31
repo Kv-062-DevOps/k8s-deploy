@@ -14,8 +14,8 @@ minikube start
  
 kubectl apply -f db.yml
 kubectl apply -f get.yml
-kubectl apply -f post.yml
-kubectl apply -f front.yml
+kubectl apply -f post.yaml
+kubectl apply -f front.yaml
  
 ```
 Use command to get the address link:
