@@ -20,7 +20,7 @@ kubectl apply -f front.yml
 ```
 Use command to get the address link:
 ```
-minikube service front-srv -n demo --url
+minikube service front-srv --url
 ```
 Open it in your web browser (for example, <http://172.17.0.2:30808>).  
 
