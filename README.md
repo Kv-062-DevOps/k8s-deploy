@@ -11,11 +11,11 @@ git clone https://github.com/Kv-062-DevOps/k8s-deploy.git
 Open the folder **`k8s-deploy`** in commandline console and execute:
 ```
 minikube start
- 
 kubectl apply -f ./
-
+```
+If you have Windows, do port forwarding:
+```
 kubectl port-forward front-srv 8083:8080
- 
 ```
 Use command to get the address link:
 ```
@@ -51,9 +51,6 @@ kubectl get services
 kubectl get services
  
 minikube stop
- 
 ```
 ---
-_https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request_
-
-
+ 
