@@ -1,7 +1,7 @@
 # The "Employee Manager" application
 
 _Kubernetes, Minikube, Docker_
----
+
 ## How to start the Demo project with all services in the Minikube
 
 Download repository if you don't have:
