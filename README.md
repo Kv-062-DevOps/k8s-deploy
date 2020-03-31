@@ -32,13 +32,13 @@ minikube dashboard
 
 If you want to see a raw data in the GET service, use:
 ```
-minikube service get-srv -n demo --url
+minikube service get-srv --url
 ```
 for example, link will be <http://172.17.0.2:30593>
 
 If you want to see a raw data in the Backend service, get the address using command:
 ```
-minikube service back-srv -n demo --url
+minikube service back-srv --url
 ```
 and open this link in browser, adding a path `/list`, for example: <http://172.17.0.2:31486/list>
 
