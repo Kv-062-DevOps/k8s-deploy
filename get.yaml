@@ -4,7 +4,7 @@ metadata:
   name: get-conf
 data:
   ENDPOINT: "back-srv:8083"
-  HOST_PORT: "8084"
+  HOST_PORT: "8081"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -26,7 +26,7 @@ spec:
         - name: get
           image: nikitasadok/go-get-service
           ports:
-            - containerPort: 8084
+            - containerPort: 8081
               protocol: TCP
           envFrom:
           - configMapRef:
@@ -41,10 +41,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8084
+  - port: 8081
     protocol: TCP
-    targetPort: 8084
+    targetPort: 8081
   selector:
     app: get
-
-
