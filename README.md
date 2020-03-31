@@ -13,6 +13,8 @@ Open the folder **`k8s-deploy`** in commandline console and execute:
 minikube start
  
 kubectl apply -f ./
+
+kubectl port-forward front-srv 8083:8080
  
 ```
 Use command to get the address link:
