@@ -12,10 +12,7 @@ Open the folder **`k8s-deploy`** in commandline console and execute:
 ```
 minikube start
  
-kubectl apply -f db.yml
-kubectl apply -f get.yml
-kubectl apply -f post.yaml
-kubectl apply -f front.yaml
+kubectl apply -f ./
  
 ```
 Use command to get the address link:
@@ -45,7 +42,7 @@ and open this link in browser, adding a path `/list`, for example: <http://172.1
 ### Clear resources after work:
 ```
 kubectl delete deployments back get post db front
-kubectl delete services back-srv get-srv post-srv db-srv front-srv 
+kubectl delete services back-srv get-srv post-srv db front-srv 
  
 kubectl get pods
 kubectl get services
