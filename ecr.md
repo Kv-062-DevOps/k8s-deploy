@@ -3,7 +3,8 @@ Let's start with pushing image to ECR. All of the images will be hosted in ```
 http://074368059797.dkr.ecr.eu-central-1.amazonaws.com/nikitasadok```
 Since we cannot use roles for pushing because of GitHub Action limitations, every member of the team will have personal IAM user
 which can perform only pushes to the repo. If you want your creds just text me :). 
-Pulling. It gets a little more tricky with that. First, you need to have a user who can, at least, read from the ECR repo.
+Pulling. It gets a little more tricky with that. First, you need to have a user who can, at least, read from the ECR repo. 
+After that, you need to give me the username of that user as well as the AWS account ID. I will share the IAM role with you. 
 Then, you need to go to IAM -> Users -> your_pulling_user -> Policies -> add inline policy. Then, you need to choose JSON and 
 paste the following:
 ```
